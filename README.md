@@ -1,12 +1,12 @@
-An attempt to build software for composing and compiling novels, something like Scrivener, but using Sublime Text as the IDE and Multimarkdown as the markup language. 
+An attempt to build software for composing and compiling novels, something like Scrivener, but using Sublime Text as the IDE and [Multimarkdown]() as the markup language. 
 
 Strongly inspired by [Scrivener](), and [this article by Ian Hocking](http://ianhocking.com/2013/06/22/writing-a-novel-using-markdown/).
 
-It currently runs as a node.js grunt task.
+It currently runs as a [node][].js [grunt][] task.
 
 # To Install;
 
-- Install Node.js (I wrote this on v0.10.21) if you haven't already got it.
+- Install [Node]().js (I wrote this on v0.10.21) if you haven't already got it.
 - Clone this repo. 
 - `npm install -i grunt-cli` to get the grunt task runner, if you haven't already got it.
 - Open a command window in `c:\wherever\you\cloned\the\repo\Compiler` and run `npm install` the packages. 
@@ -58,3 +58,8 @@ This will start a processor running in the background. Whenever you edit a markd
          firstDraft.html
          secondDraft.html
          fragments.html
+
+    [Multimarkdown]: http://fletcherpenney.net/multimarkdown/
+    [Scrivener]: http://literatureandlatte.com/scrivener.php
+    [Node]: http://nodejs.org/
+    [Grunt]: http://gruntjs.com/
