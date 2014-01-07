@@ -59,7 +59,7 @@ This will start a processor running in the background. Whenever you edit a markd
          secondDraft.html
          fragments.html
 
-    [Multimarkdown]: http://fletcherpenney.net/multimarkdown/
-    [Scrivener]: http://literatureandlatte.com/scrivener.php
-    [Node.js]: http://nodejs.org/
-    [Grunt]: http://gruntjs.com/
+  [Multimarkdown]: http://fletcherpenney.net/multimarkdown/
+  [Scrivener]: http://literatureandlatte.com/scrivener.php
+  [Node.js]: http://nodejs.org/
+  [Grunt]: http://gruntjs.com/
