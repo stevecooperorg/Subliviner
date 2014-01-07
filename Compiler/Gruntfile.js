@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-  var root = grunt.option( "root" ) || ".";
+  var root = grunt.option( "novel" ) || ".";
   var manuscriptsDir = root + "/manuscripts/"; 
   var workingDir = root + "/01.Working/";
   var outDir = root + "/02.Production/"

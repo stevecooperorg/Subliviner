@@ -2,13 +2,14 @@ An attempt to build software for composing and compiling novels, something like 
 
 Strongly inspired by [Scrivener][], and [this article by Ian Hocking](http://ianhocking.com/2013/06/22/writing-a-novel-using-markdown/).
 
-It currently runs as a [Node.js][] [grunt][] task.
+It currently runs as a [Node.js][] [Grunt][] task. I've only tested it on windows, but I should think it'll port pretty easily.
 
 # To Install;
 
 - Install [Node.js][] (I wrote this on v0.10.21) if you haven't already got it.
+- Install [Mltimarkdown][]
 - Clone this repo. 
-- `npm install -i grunt-cli` to get the grunt task runner, if you haven't already got it.
+- `npm install -g grunt-cli` to get the grunt task runner, if you haven't already got it.
 - Open a command window in `c:\wherever\you\cloned\the\repo\Compiler` and run `npm install` the packages. 
 
 # To Write the Novel;
@@ -35,7 +36,7 @@ Under this structure, though, this allows many different manuscripts. I use this
 
 On the command line;
 
-    grunt --gruntfile="c:\wherever\you\cloned\the\repo\Compiler\gruntfile.js" --root="c:\wherever\your\novel\lives" watch
+    grunt --gruntfile="c:\wherever\you\cloned\the\repo\Compiler\gruntfile.js" --novel="c:\wherever\your\novel\lives" watch
 
 This will start a processor running in the background. Whenever you edit a markdown file, it'll concatenate the files in each subfolder of 'manuscripts' and run it through multimarkdown. You should end up with a structure like this;
 
