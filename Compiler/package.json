@@ -1,0 +1,17 @@
+{
+  "name": "grunt-multimarkdown",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "(c) Steve Cooper 2013 - All rights reserved",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-shell": "~0.6.1"
+  }
+}
