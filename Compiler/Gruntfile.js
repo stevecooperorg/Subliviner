@@ -6,9 +6,26 @@ module.exports = function(grunt) {
 
   console.log("Using the manuscripts directory '" + manuscriptsDir + '"');
 
+  var endsWith = function(str, suffix) {
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
+  };
+
+  var process = function(src, filepath) {
+    var path = require('path');
+    var filedir = path.dirname(filepath);
+    var filename =  filepath.substr(filedir.length + 1);
+    var parts = filename.split('.');
+    if (parts[parts.length-1].toLowerCase() == "mmd") {
+      parts.pop();
+    }
+    var name = parts[parts.length -1];
+    return "# " + name + grunt.util.linefeed + grunt.util.linefeed + src;
+  };
+
   var concatConfig = {
       options: {
-        separator: grunt.util.linefeed + grunt.util.linefeed
+        separator: grunt.util.linefeed + grunt.util.linefeed,
+        process:process
       }
   };
 
