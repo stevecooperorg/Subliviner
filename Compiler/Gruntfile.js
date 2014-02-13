@@ -1,8 +1,11 @@
 module.exports = function(grunt) {
   var root = grunt.option( "novel" ) || ".";
   var manuscriptsDir = root + "/manuscripts/"; 
-  var workingDir = root + "/01.Working/";
-  var outDir = root + "/02.Production/"
+  var outputDir = root + "/out/";
+  var workingDir = outputDir + "01.Working/";
+  var htmlDir = outputDir + "02.Html/";
+  var ebookDir = outputDir + "03.Mobi/";
+  var pdfDir = outputDir + "04.Pdf/";
 
   console.log("Using the manuscripts directory '" + manuscriptsDir + '"');
 
@@ -30,7 +33,10 @@ module.exports = function(grunt) {
   };
 
   grunt.file.mkdir(workingDir);
-  grunt.file.mkdir(outDir);
+  grunt.file.mkdir(htmlDir);
+  grunt.file.mkdir(ebookDir);
+  grunt.file.mkdir(pdfDir);
+
   var folders = grunt.file.expand({ filter: 'isDirectory', cwd:manuscriptsDir }, ['*']);
   console.log(folders);
 
@@ -43,8 +49,19 @@ module.exports = function(grunt) {
       src: manuscriptsDir + folder + "/**/*.mmd",
       dest: concatenated
     };
+
+    var x = htmlDir + folder + '.html"';
+    var y = ebookDir + folder + '.mobi';
+    var z = pdfDir + folder + '.pdf';
+
     shellConfig[folder] =  {
-      command: 'multimarkdown "' + concatenated + '" -o "' + outDir + folder + '.html"' 
+      command: 'multimarkdown "' + concatenated + '" -o "' + x
+    };
+    shellConfig[folder + '_ebook'] =  {
+      command: 'ebook-convert "' + x + ' ' + y
+    };
+    shellConfig[folder + '_pdf'] =  {
+      command: 'ebook-convert "' + x + ' ' + z
     };
   }
 
