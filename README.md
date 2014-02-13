@@ -7,7 +7,8 @@ It currently runs as a [Node.js][] [Grunt][] task. I've only tested it on window
 # To Install;
 
 - Install [Node.js][] (I wrote this on v0.10.21) if you haven't already got it.
-- Install [Mltimarkdown][]
+- Install [Multimarkdown][]
+- Install [Calibre][] ebook publisher
 - Clone this repo. 
 - `npm install -g grunt-cli` to get the grunt task runner, if you haven't already got it.
 - Open a command window in `c:\wherever\you\cloned\the\repo\Compiler` and run `npm install` the packages. 
@@ -51,16 +52,26 @@ This will start a processor running in the background. Whenever you edit a markd
          secondDraft/
            01.chapter 1.mmd
          fragments/
-      01.working/
+      out/
+        01.working/
          firstDraft.mmd
          secondDraft.mmd
          fragments.mmd
-      02.Production/
+      02.Html/
          firstDraft.html
          secondDraft.html
          fragments.html
+      03.Mobi/
+         firstDraft.mobi
+         secondDraft.mobi
+         fragments.mobi
+      04.Pdf/
+         firstDraft.pdf
+         secondDraft.pdf
+         fragments.pdf
 
   [Multimarkdown]: http://fletcherpenney.net/multimarkdown/
+  [Calibre]: http://www.calibre-ebook.com/ 
   [Scrivener]: http://literatureandlatte.com/scrivener.php
   [Node.js]: http://nodejs.org/
   [Grunt]: http://gruntjs.com/
